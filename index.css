@@ -1,0 +1,132 @@
+body {
+    font-family: "Rye", serif;
+    background-image: url("images/table.png");
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+#card-container {
+    background-color: #11281A;
+    width: 100%;
+    height: 200px;
+    border-top: 5px solid gold;
+    border-bottom: 5px solid gold;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.card {
+    height: 150px;
+    width: 100px;
+    background-color: darkred;
+    background-image: url("images/pattern.jpg");
+    background-size: cover;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px black;
+}
+
+.card > div > p {
+    color: whitesmoke;
+    margin: 3px 8px;
+    text-shadow: 0 0 5px black;
+}
+
+.card .card-container-top {
+    align-self: start;
+}
+
+.card .card-container-bottom {
+    align-self: end;
+}
+
+.card .diamond {
+    background-color: whitesmoke;
+    background-image: url("images/mosaic.jpg");
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    transform: rotate(45deg) skew(10deg, 10deg);
+    align-self: center;
+    z-index: 3!important;
+}
+
+.card > div > .diamond {
+    background-color: whitesmoke;
+    height: 8px;
+    width: 8px;
+    margin: 0 8px;
+}
+
+button {
+    background-color: goldenrod;
+    min-width: 150px;
+    color: #016f32;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 15px;
+    margin: 0 5px;
+    font-weight: bold;
+    font-family: "Rye", serif;
+}
+
+button:hover {
+    background-color: gold;
+    text-decoration: underline;
+    animation: 2s ease-in multicolor;
+}
+
+
+@keyframes multicolor {
+    15%  {background-color: gold; transform: scale(1.05);}
+    30%  {background-color: darkred;}
+    100%  {background-color: gold;}
+}
+
+.confetti-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 3s ease-in confetti-container;
+    z-index: 10;
+}
+
+.confetti-animation > div {
+    width: 10px;
+    height: 25px;
+    position: relative;
+    box-shadow: 0 0 10px red;
+    opacity: 0.3;
+    border-radius: 2px;
+}
+
+@keyframes fadeInOut {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#confetti-container {
+    background: radial-gradient(circle at top, #000 35%, #733000 45%, #000 75%);
+    animation: fadeInOut 4s ease-in-out infinite;
+}
